@@ -4,14 +4,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  python.version: '3.11'
-
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+    versionSpec: '3.11'
+  displayName: 'Use Python 3.11'
 
 - script: |
     python -m pip install --upgrade pip
