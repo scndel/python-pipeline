@@ -3,6 +3,9 @@ trigger:
 
 pool: Default
 
+variables:
+- group: tokens
+
 strategy:
   matrix:
     Python38:
@@ -17,6 +20,7 @@ strategy:
 steps:
 - task: UsePythonVersion@0
   inputs:
+    githubToken: $(GITHUB_TOKEN)
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
