@@ -1,10 +1,8 @@
 trigger:
 - main
 
-pool: Default
-
-variables:
-- group: tokens
+pool:
+  vmImage: ubuntu-latest
 
 strategy:
   matrix:
